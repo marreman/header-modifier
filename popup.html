@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>test</title>
+</head>
+<body>
+	<label>
+		<strong>Url substring</strong><br>
+  	<input name="urlCriteria" placeholder="api.example.com">
+		<small>I will act on headers of URLs that contain this string.</small>
+	</label>
+  <hr>
+	<label>
+		<strong>Header name</strong><br>
+  	<input name="headerNameCriteria" placeholder="Origin">
+		<small>I will act on headers that contain this string.</small>
+	</label>
+  <hr>
+	<label>
+		<strong>Header value substring</strong><br>
+  	<input name="headerValueSubstring" placeholder="api-foo.example.com">
+		<small>I will look for this substring in header values.</small>
+	</label>
+  <hr>
+	<label>
+		<strong>Header value substitute</strong><br>
+  	<input name="headerValueSubstitute" placeholder="api-bar.example.com">
+		<small>I will replace found substrings with this string.</small>
+	</label>
+	<script src="popup.js"></script>
+</body>
+</html>
