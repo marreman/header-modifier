@@ -1,3 +1,9 @@
+import { Elm } from "./Background.elm"
+
+const app = Elm.Background.init()
+
+console.log(app)
+
 const handler = createRequestHandler({
   url: "google.com",
   requestHeaders: {

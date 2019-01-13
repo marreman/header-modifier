@@ -5,7 +5,7 @@
     "Makes it possible to modify request and response headers of requests that match certain urls.",
   "manifest_version": 2,
   "background": {
-    "scripts": ["handle-request.js", "background.js"],
+    "scripts": ["handle-request.js", "build/background.js"],
     "persistent": true
   },
   "browser_action": {

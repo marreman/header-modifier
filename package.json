@@ -1,0 +1,27 @@
+{
+  "name": "header-modifier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handle-request.js",
+  "scripts": {
+    "dev": "parcel watch src/background.js -d build --no-hmr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marreman/header-modifier.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marreman/header-modifier/issues"
+  },
+  "homepage": "https://github.com/marreman/header-modifier#readme",
+  "dependencies": {
+    "parcel": "^1.11.0"
+  },
+  "devDependencies": {
+    "elm-hot": "^1.0.1",
+    "node-elm-compiler": "^5.0.1"
+  }
+}
