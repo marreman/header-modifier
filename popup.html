@@ -2,31 +2,43 @@
 <html>
 <head>
   <title>test</title>
+  <style>
+    th {
+      text-align: left;
+    }
+
+    td {
+      white-space: nowrap;
+    }
+  </style>
 </head>
 <body>
-	<label>
-		<strong>Url substring</strong><br>
-  	<input name="urlCriteria" placeholder="api.example.com">
-		<small>I will act on headers of URLs that contain this string.</small>
-	</label>
-  <hr>
-	<label>
-		<strong>Header name</strong><br>
-  	<input name="headerNameCriteria" placeholder="Origin">
-		<small>I will act on headers that contain this string.</small>
-	</label>
-  <hr>
-	<label>
-		<strong>Header value substring</strong><br>
-  	<input name="headerValueSubstring" placeholder="api-foo.example.com">
-		<small>I will look for this substring in header values.</small>
-	</label>
-  <hr>
-	<label>
-		<strong>Header value substitute</strong><br>
-  	<input name="headerValueSubstitute" placeholder="api-bar.example.com">
-		<small>I will replace found substrings with this string.</small>
-	</label>
+  <table>
+    <tr>
+      <th>Url</th>
+      <th>Header</th>
+      <th>String</th>
+      <th>Replacement</th>
+    </tr>
+    <tr>
+      <td>api.example.com</td>
+      <td>Origin</td>
+      <td>localhost</td>
+      <td>example.com</td>
+    </tr>
+    <tr>
+      <td>api.example.com</td>
+      <td>Allow-Access-Control-Origin</td>
+      <td>example.com</td>
+      <td>localhost</td>
+    </tr>
+    <tr>
+      <td><input name="url"></td>
+      <td><input name="url"></td>
+      <td><input name="url"></td>
+      <td><input name="url"></td>
+    </tr>
+  </table>
 	<script src="popup.js"></script>
 </body>
 </html>
