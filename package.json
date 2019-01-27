@@ -1,0 +1,32 @@
+{
+  "name": "header-modifier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "background.js",
+  "dependencies": {},
+  "devDependencies": {
+    "parcel": "^1.11.0",
+    "jest": "^24.0.0"
+  },
+  "scripts": {
+    "build":
+      "npm run build:setup && npm run build:manifest && npm run build:images && npm run build:background && npm run build:popup",
+    "build:setup": "mkdir -p ./dist",
+    "build:manifest": "cp ./src/manifest.json ./dist",
+    "build:images": "cp -R ./src/images ./dist/images",
+    "build:background": "parcel build ./src/background.js",
+    "build:popup": "parcel build ./src/popup.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marreman/header-modifier.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marreman/header-modifier/issues"
+  },
+  "homepage": "https://github.com/marreman/header-modifier#readme"
+}
