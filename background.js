@@ -1,27 +1,43 @@
 const handler = createRequestHandler({
-  url: "google.com",
+  url: "api.vcm-staging.sh",
   requestHeaders: {
     Origin: {
       from: "localhost",
-      to: "google.com"
+      to: "local.drivekitt.com"
+    },
+    Referer: {
+      from: "localhost",
+      to: "local.drivekitt.com"
     }
   },
   responseHeaders: {
     "access-control-allow-origin": {
-      from: "google.com",
+      from: "local.drivekitt.com",
       to: "localhost"
     }
   }
 })
 
 chrome.webRequest.onBeforeSendHeaders.addListener(
-  handler,
+  details => {
+    const n = handler(details)
+
+    console.log(n)
+
+    return n
+  },
   { urls: ["<all_urls>"] },
   ["blocking", "requestHeaders"]
 )
 
 chrome.webRequest.onHeadersReceived.addListener(
-  handler,
+  details => {
+    const n = handler(details)
+
+    console.log(n)
+
+    return n
+  },
   { urls: ["<all_urls>"] },
   ["blocking", "responseHeaders"]
 )
